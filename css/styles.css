@@ -1,0 +1,23 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --h1-font-size: 6rem;
+    --span-font-size: 3.5rem;
+    --input-size: 20.75rem;
+    --h1-color: #ffffff;
+    --span-color: #ffffff;
+    --button-color: #ffffff;
+    
+}
+
+@media screen and (max-width: 280px){
+    :root{
+        --h1-font-size: 2.5rem;
+        --span-font-size: 1.75rem;
+        --input-size: 10.8rem;
+    }
+}

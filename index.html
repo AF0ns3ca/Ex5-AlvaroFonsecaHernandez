@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Document</title>
 </head>
 <body>
+    <div class="hero-container">
+        <div class="hero-body">
+          <img src="./assets/imgs/image.png" alt="" />
+        </div>
+      </div>
+  
+  <form id="form" action="./templates/envioCorrecto.html" method="get">
+            
+              <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
+              <input type="email" name="email" id="email" placeholder="Introduce correo electronico..."/>
+              <label for="info1">Solicitud de información adicional</label>
+              <input type="radio" id="info1" name="info">
+              <label for="info2">Reserva de Ruta</label>
+              <input type="radio" id="info2" name="info">
+              <input type="button" value="Info" >
+              <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+              <input type="submit" value="Enviar" id="enviar"/>
+         
+          <ul class="errores" id="errores"></ul>
+      </form>
+  
+      <footer>
+          <div class="footer-container">
+              <div class="footer-body">
+                  <div class="footer-body__text">
+                  <p>Alvaro Fonseca Hernandez &copy;</p>
+                  </div>
+              </div>
+          </div>
+      </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
