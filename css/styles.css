@@ -1,33 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Pirata+One&display=swap');
+
 *, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Variables CSS */
 :root{
-    --h1-font-size: 6rem;
-    --span-font-size: 3.5rem;
+    --h1-font-size: 5rem;
+    --span-font-size: 3rem;
     --input-size: 20.75rem;
+    --input-height: 2.5rem;
     --h1-color: #ffffff;
     --span-color: #ffffff;
     --button-color: #ffffff;
     
 }
 
-@media screen and (max-width: 280px){
+/* Medias Query */
+@media screen and (max-width: 540px){
     :root{
-        --h1-font-size: 2.5rem;
-        --span-font-size: 1.75rem;
+        --h1-font-size: 2.1rem;
+        --span-font-size: 1.70rem;
         --input-size: 10.8rem;
     }
 }
+
+@media screen and (max-width: 280px){
+    :root{
+        --h1-font-size: 1.25rem;
+        --span-font-size: 0.875rem;
+        --input-size: 10.8rem;
+    }
+}
+
+
 .hero-container{
     background: url(../assets/imgs/image.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 80vh;
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
     position: relative;
 }
 
@@ -37,17 +51,174 @@
     height: 100%;
     width: 100%;
     background-color: #000000;
-    opacity: 0.55;
+    opacity: 0.6;
+}
+
+.hero-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    /* Le añadimos un margen responsivo */
+    margin: 0 1rem;
+}
+
+.hero-body h1{
+    color: var(--h1-color);
+    font-size: var(--h1-font-size);
+}
+
+.hero-body span{
+    color: var(--span-color);
+    font-size: var(--span-font-size);
+}
+
+
+label{
+    font-size: 1.5rem;
+    color: #000000;
+    margin-top: 1rem;
+    /* font-family: 'Pirata One', system-ui; */
+    
 }
 
 form{
-    display:flex;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+legend{
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 1rem;
+    /*font-family: 'Pirata One', system-ui;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+
+}
+
+legend img{
+    width: 70px;
+    height: 70px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+fieldset{
+    border-radius: 0.5rem;
+    border: 0.2px solid #000000;
+    text-shadow: 0.5px 0.5px 0.5px #000000;
+}
+
+
+
+.formulario{
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;  
+}
+
+input{
+    width: var(--input-size);
+    height: var(--input-height);
+    border-radius: 0.5rem;
+    border: 0.5px solid #000000;
+    padding-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+.radio-group{
+    width: 100%;
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: center;
+}
+
+.radio-group input[type="button"]{
+    margin: 1rem;
+}
+
+/*Al input de tipo button le ponemos el value, el texto en medio y lo ponemos del color del input de tipo submit*/
+input[type="button"]{
+    width: 50%;
+    cursor: pointer;
+    background-color: rgb(106, 60, 13);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
     text-align: center;
 }
 
-.errores{
-    color: red;
+input[type="button"]:hover{
+    background-color: rgba(205, 133, 25, 0.8);
+}
+
+textarea{
+    width: var(--input-size);
+    border-radius: 0.5rem;
+    border: 0.5px solid #000000;
+    padding-left: 1rem;
+    font-size: 1rem;
+    outline: none;
+}
+
+input[type="submit"]{
+    width: 100%;
+    background-color: rgb(106, 60, 13);
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+
+}
+
+input[type="submit"]:hover{
+    background-color: rgba(205, 133, 25, 0.8);
+}
+
+footer{
+    font-size: larger;
+}
+
+.footer-container{
+    margin: 20px 0 0 0;
+    background-color: #000000;
+    height: 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+.footer-body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }

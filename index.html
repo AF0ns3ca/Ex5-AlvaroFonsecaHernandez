@@ -15,18 +15,24 @@
         </div>
       </div>
   
-  <form id="formulario" action="./templates/envioCorrecto.html" method="get">
-            
-              <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
-              <!-- Existe tipo email pero para hacer nosotros la validación le asignamos tipo text -->
-              <input type="text" name="email" id="email" placeholder="Introduce correo electronico..."/>
-              <label for="info1">Solicitud de información adicional</label>
-              <input type="radio" id="info1" name="info" checked>
-              <label for="info2">Reserva de Ruta</label>
-              <input type="radio" id="info2" name="info">
-              <input type="button" value="Info" id="info-btn">
-              <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
-              <input type="submit" value="Enviar" id="enviar"/>
+  <form id="formulario" class="form" action="./templates/envioCorrecto.html" method="get">
+            <fieldset class="formulario">
+                <legend>Contáctanos</legend>
+                <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
+                <!-- Existe tipo email pero para hacer nosotros la validación le asignamos tipo text -->
+                <input type="text" name="email" id="email" placeholder="Introduce correo electronico..."/>
+                <div class="radio-group">
+                        <label for="info1">Solicitud de información adicional</label>
+                        <input type="radio" id="info1" name="info" checked>
+                        <label for="info2">Reserva de Ruta</label>
+                        <input type="radio" id="info2" name="info">                    
+                    <input type="button" value="Info" id="info-btn">
+                </div>
+                
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+                <input type="submit" value="Enviar" id="enviar"/>
+            </fieldset>
+              
          
           <ul class="errores" id="errores">
           </ul>

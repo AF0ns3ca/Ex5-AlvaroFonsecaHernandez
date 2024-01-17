@@ -28,8 +28,12 @@ const validar = (e) => {
   email.value.length === 0 &&
     mensajesError.push("El campo email no puede estar vacio");
 
-  !/^[a-zA-Z0-9]*$/.test(nombre.value.trim()) &&
+  //Validamos que el nombre tenga que empezar por una letra mayuscula
+  !/^[A-Z]/.test(nombre.value.trim()) &&
+    mensajesError.push("El nombre debe comenzar por una letra mayuscula");
+  !/^[a-zA-Z]*$/.test(nombre.value.trim()) &&
     mensajesError.push("El nombre solo puede tener numeros y letras");
+
   !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value.trim()) &&
     mensajesError.push("Introduzca correctamente su email");
 
