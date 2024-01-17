@@ -14,15 +14,15 @@
         </div>
       </div>
   
-  <form id="form" action="./templates/envioCorrecto.html" method="get">
+  <form id="formulario" action="./templates/envioCorrecto.html" method="get">
             
               <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
               <input type="email" name="email" id="email" placeholder="Introduce correo electronico..."/>
               <label for="info1">Solicitud de información adicional</label>
-              <input type="radio" id="info1" name="info">
+              <input type="radio" id="info1" name="info" checked>
               <label for="info2">Reserva de Ruta</label>
               <input type="radio" id="info2" name="info">
-              <input type="button" value="Info" >
+              <input type="button" value="Info" id="info-btn">
               <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
               <input type="submit" value="Enviar" id="enviar"/>
          
