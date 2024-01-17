@@ -1,224 +1,236 @@
-@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Skranji&display=swap');
 
-*, *::before, *::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Variables CSS */
-:root{
-    --h1-font-size: 5rem;
-    --span-font-size: 3rem;
-    --input-size: 20.75rem;
-    --input-height: 2.5rem;
-    --h1-color: #ffffff;
-    --span-color: #ffffff;
-    --button-color: #ffffff;
-    
+:root {
+  --h1-font-size: 5rem;
+  --span-font-size: 3rem;
+  --input-size: 20.75rem;
+  --input-height: 2.5rem;
+  --h1-color: #ffffff;
+  --span-color: #ffffff;
+  --button-color: #ffffff;
+  --img-width: 4.375rem;
+  --img-height: 4.375rem;
 }
 
 /* Medias Query */
-@media screen and (max-width: 540px){
-    :root{
-        --h1-font-size: 2.1rem;
-        --span-font-size: 1.70rem;
-        --input-size: 10.8rem;
-    }
+@media screen and (max-width: 540px) {
+  :root {
+    --h1-font-size: 2.1rem;
+    --span-font-size: 1.7rem;
+    --input-size: 10.8rem;
+    --img-width: 3.375rem;
+    --img-height: 3.375rem;
+  }
 }
 
-@media screen and (max-width: 280px){
-    :root{
-        --h1-font-size: 1.25rem;
-        --span-font-size: 0.875rem;
-        --input-size: 10.8rem;
-    }
+@media screen and (max-width: 280px) {
+  :root {
+    --h1-font-size: 1.25rem;
+    --span-font-size: 0.875rem;
+    --input-size: 10.8rem;
+    --img-width: 2.375rem;
+    --img-height: 2.375rem;
+  }
 }
 
-
-.hero-container{
-    background: url(../assets/imgs/image.png);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 80vh;
-    position: relative;
+.hero-container {
+  background: url(../assets/imgs/image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  clip-path: ellipse(50% 49% at 50% 50%);
 }
 
-.hero-container::before{
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: #000000;
-    opacity: 0.6;
+.hero-container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.6;
 }
 
-.hero-body{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    /* Le añadimos un margen responsivo */
-    margin: 0 1rem;
+.hero-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  /* Le añadimos un margen responsivo */
+  margin: 0 1rem;
 }
 
-.hero-body h1{
-    color: var(--h1-color);
-    font-size: var(--h1-font-size);
+.hero-body h1 {
+  color: var(--h1-color);
+  font-size: var(--h1-font-size);
+  font-family: 'Skranji', system-ui;
 }
 
-.hero-body span{
-    color: var(--span-color);
-    font-size: var(--span-font-size);
+.hero-body span {
+  color: var(--span-color);
+  font-size: var(--span-font-size);
+  font-family: 'Skranji', system-ui;
 }
 
-
-label{
-    font-size: 1.5rem;
-    color: #000000;
-    margin-top: 1rem;
-    /* font-family: 'Pirata One', system-ui; */
-    
+label {
+  font-size: 1.5rem;
+  color: #000000;
+  margin-top: 1rem;
 }
 
-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Skranji', system-ui;
 }
 
-legend{
-    font-size: 2rem;
-    color: #000000;
-    margin-bottom: 1rem;
-    /*font-family: 'Pirata One', system-ui;*/
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 1rem;
-
-
+legend {
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-legend img{
-    width: 70px;
-    height: 70px;
-    margin-left: 10px;
-    margin-right: 10px;
+legend img {
+  width: var(--img-width);
+  height: var(--img-height);
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-fieldset{
-    border-radius: 0.5rem;
-    border: 0.2px solid #000000;
-    text-shadow: 0.5px 0.5px 0.5px #000000;
+fieldset {
+  border-radius: 0.5rem;
+  border: 0.2px solid #000000;
 }
 
-
-
-.formulario{
-    width: 80%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 2rem;
-    gap: 1rem;  
+.formulario {
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
 }
 
-input{
-    width: var(--input-size);
-    height: var(--input-height);
-    border-radius: 0.5rem;
-    border: 0.5px solid #000000;
-    padding-left: 1rem;
-    font-size: 1rem;
-    outline: none;
+input {
+  width: var(--input-size);
+  height: var(--input-height);
+  border-radius: 0.5rem;
+  border: 0.5px solid #000000;
+  padding-left: 1rem;
+  font-size: 1rem;
+  outline: none;
 }
 
-.radio-group{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+.radio-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
-.radio-group input[type="button"]{
-    margin: 1rem;
+.radio-group input[type="button"] {
+  margin: 1rem;
 }
 
 /*Al input de tipo button le ponemos el value, el texto en medio y lo ponemos del color del input de tipo submit*/
-input[type="button"]{
-    width: 50%;
-    cursor: pointer;
-    background-color: rgb(106, 60, 13);
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
+input[type="button"] {
+  width: 50%;
+  cursor: pointer;
+  background-color: rgb(106, 60, 13);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-input[type="button"]:hover{
-    background-color: rgba(205, 133, 25, 0.8);
+input[type="button"]:hover {
+  background-color: rgba(205, 133, 25, 0.8);
 }
 
-textarea{
-    width: var(--input-size);
-    border-radius: 0.5rem;
-    border: 0.5px solid #000000;
-    padding-left: 1rem;
-    font-size: 1rem;
-    outline: none;
+textarea {
+  width: var(--input-size);
+  border-radius: 0.5rem;
+  border: 0.5px solid #000000;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  font-size: 1rem;
+  outline: none;
 }
 
-input[type="submit"]{
-    width: 100%;
-    background-color: rgb(106, 60, 13);
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 0;
-
+input[type="submit"] {
+  width: 100%;
+  background-color: rgb(106, 60, 13);
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
 }
 
-input[type="submit"]:hover{
-    background-color: rgba(205, 133, 25, 0.8);
+input[type="submit"]:hover {
+  background-color: rgba(205, 133, 25, 0.8);
 }
 
-footer{
-    font-size: larger;
+.errores {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
-.footer-container{
-    margin: 20px 0 0 0;
-    background-color: #000000;
-    height: 8vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
+footer {
+  font-size: larger;
 }
 
-.footer-body{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
+.footer-container {
+  margin: 20px 0 0 0;
+  background-color: #000000;
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.footer-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

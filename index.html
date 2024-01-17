@@ -5,48 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <title>Document</title>
+    <title>Examen Tema 5 DWEC - DIW</title>
 </head>
 <body>
-    <div class="hero-container">
-        <div class="hero-body">
-          <h1>Yggdrasil Natural Trails</h1>
-          <span>Las mejores rutas de montaña de los 9 mundos</span>
-        </div>
-      </div>
-  
-  <form id="formulario" class="form" action="./templates/envioCorrecto.html" method="get">
-            <fieldset class="formulario">
-                <legend>Contáctanos</legend>
-                <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
-                <!-- Existe tipo email pero para hacer nosotros la validación le asignamos tipo text -->
-                <input type="text" name="email" id="email" placeholder="Introduce correo electronico..."/>
-                <div class="radio-group">
-                        <label for="info1">Solicitud de información adicional</label>
-                        <input type="radio" id="info1" name="info" checked>
-                        <label for="info2">Reserva de Ruta</label>
-                        <input type="radio" id="info2" name="info">                    
-                    <input type="button" value="Info" id="info-btn">
-                </div>
-                
-                <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
-                <input type="submit" value="Enviar" id="enviar"/>
-            </fieldset>
-              
-         
-          <ul class="errores" id="errores">
-          </ul>
-      </form>
-  
-      <footer>
-          <div class="footer-container">
-              <div class="footer-body">
-                  <div class="footer-body__text">
-                  <p>Alvaro Fonseca Hernandez &copy;</p>
+        <div class="hero-container">
+            <div class="hero-body">
+              <h1>Yggdrasil Natural Trails</h1>
+              <span>Las mejores rutas de montaña de los 9 mundos</span>
+            </div>
+          </div>
+      
+      <form id="formulario" class="form" action="./templates/envioCorrecto.html" method="get">
+                <fieldset class="formulario">
+                    <legend><img src="./assets/imgs/ygg.png" alt="">Contáctanos<img src="./assets/imgs/ygg.png" alt=""></legend>
+                    <!-- <legend>Contáctanos</legend> -->
+                    <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
+                    <!-- Existe tipo email pero para hacer nosotros la validación le asignamos tipo text -->
+                    <input type="text" name="email" id="email" placeholder="Introduce correo electronico..."/>
+                    <div class="radio-group">
+                            <label for="info1">Solicitud de información adicional</label>
+                            <input type="radio" id="info1" name="info" checked>
+                            <label for="info2">Reserva de Ruta</label>
+                            <input type="radio" id="info2" name="info">                    
+                        <input type="button" value="Info" id="info-btn">
+                    </div>
+                    
+                    <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Mensaje..."></textarea>
+                    <input type="submit" value="Enviar" id="enviar"/>
+                </fieldset>
+                  
+             
+              <ul class="errores" id="errores">
+              </ul>
+          </form>
+      
+          <footer>
+              <div class="footer-container">
+                  <div class="footer-body">
+                      <p>Alvaro Fonseca Hernandez &copy;</p>
                   </div>
               </div>
-          </div>
-      </footer>
+          </footer>
+    
     <script src="js/main.js"></script>
 </body>
 </html>
