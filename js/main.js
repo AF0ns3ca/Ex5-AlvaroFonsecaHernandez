@@ -23,16 +23,20 @@ const validar = (e) => {
   mensajesError = [];
 
   //Validaciones de los diferentes campos
-  nombre.value.length === 0 && mensajesError.push("El campo nombre no puede estar vacio")
-  email.value.length === 0 && mensajesError.push("El campo email no puede estar vacio")
-  mensaje.value.length === 0 && mensajesError.push("El campo mensaje no puede estar vacio")
-  mensaje.value.length < 10 && mensajesError.push("El mensaje debe contener al menos 10 caracteres")
+  nombre.value.length === 0 &&
+    mensajesError.push("El campo nombre no puede estar vacio");
+  email.value.length === 0 &&
+    mensajesError.push("El campo email no puede estar vacio");
+
   !/^[a-zA-Z0-9]*$/.test(nombre.value.trim()) &&
     mensajesError.push("El nombre solo puede tener numeros y letras");
-  !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
-    email.value.trim()
-  ) && mensajesError.push("Introduzca correctamente su email");
+  !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email.value.trim()) &&
+    mensajesError.push("Introduzca correctamente su email");
 
+  mensaje.value.length === 0 &&
+    mensajesError.push("El campo mensaje no puede estar vacio");
+  mensaje.value.length < 10 &&
+    mensajesError.push("El mensaje debe contener al menos 10 caracteres");
   //Lógica para enviar si no hay mensajes de error y se confirma por el usuario
   if (
     mensajesError.length === 0 &&
@@ -44,7 +48,7 @@ const validar = (e) => {
     console.log(mensajesError);
     mensajesError.forEach(function (mensaje) {
       const miLi = document.createElement("li");
-      miLi.mensajesError = mensaje;
+      miLi.textContent = mensaje;
       errores.appendChild(miLi);
     });
   }
