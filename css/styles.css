@@ -21,6 +21,24 @@
         --input-size: 10.8rem;
     }
 }
+.hero-container{
+    background: url(../assets/imgs/image.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%); */
+    position: relative;
+}
+
+.hero-container::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.55;
+}
 
 form{
     display:flex;
