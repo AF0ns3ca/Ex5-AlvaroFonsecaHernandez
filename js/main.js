@@ -7,25 +7,54 @@
 const formulario = document.getElementById("formulario");
 const nombre = document.getElementById("nombre");
 const email = document.getElementById("email");
+const mensaje = document.getElementById("mensaje");
 //Añadimos los radio
 //const radio = document.getElementsByName("radio");
 const radio1 = document.getElementById("info1");
 //const radio2 = document.getElementById("info2");
 const infoBtn = document.getElementById("info-btn");
 const enviar = document.getElementById("enviar");
+const errores = document.getElementById("errores");
 
 let mensajesError = [];
 
 const validar = (e) => {
-    e.preventDefault;
-    mensajesError = [];
+  e.preventDefault();
+  mensajesError = [];
 
-    !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(correo.value.trim()) && mensajesError.push("Introduzca correctamente su email")
+  //Validaciones de los diferentes campos
+  nombre.value.length === 0 && mensajesError.push("El campo nombre no puede estar vacio")
+  email.value.length === 0 && mensajesError.push("El campo email no puede estar vacio")
+  mensaje.value.length === 0 && mensajesError.push("El campo mensaje no puede estar vacio")
+  mensaje.value.length < 10 && mensajesError.push("El mensaje debe contener al menos 10 caracteres")
+  !/^[a-zA-Z0-9]*$/.test(nombre.value.trim()) &&
+    mensajesError.push("El nombre solo puede tener numeros y letras");
+  !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(
+    email.value.trim()
+  ) && mensajesError.push("Introduzca correctamente su email");
 
-}
+  //Lógica para enviar si no hay mensajes de error y se confirma por el usuario
+  if (
+    mensajesError.length === 0 &&
+    confirm("¿Estás seguro de enviar el formulario?")
+  ) {
+    formulario.submit();
+  } else if (mensajesError.length > 0) {
+    errores.textContent = "";
+    console.log(mensajesError);
+    mensajesError.forEach(function (mensaje) {
+      const miLi = document.createElement("li");
+      miLi.mensajesError = mensaje;
+      errores.appendChild(miLi);
+    });
+  }
+};
 
 const info = () => {
-    (radio1.checked) ? alert("Informacion sobre el radio button 1") : alert("Reserva de Ruta realizada");
+  radio1.checked
+    ? alert("Informacion sobre el radio button 1")
+    : alert("Reserva de Ruta realizada");
 };
 
 infoBtn.addEventListener("click", info);
+formulario.addEventListener("submit", validar);

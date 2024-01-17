@@ -8,16 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="hero-container">
+    <!-- <div class="hero-container">
         <div class="hero-body">
           <img src="./assets/imgs/image.png" alt="" />
         </div>
-      </div>
+      </div> -->
   
   <form id="formulario" action="./templates/envioCorrecto.html" method="get">
             
               <input type="text" name="nombre" id="nombre" placeholder="Introduce tu nombre..."/>
-              <input type="email" name="email" id="email" placeholder="Introduce correo electronico..."/>
+              <!-- Existe tipo email pero para hacer nosotros la validación le asignamos tipo text -->
+              <input type="text" name="email" id="email" placeholder="Introduce correo electronico..."/>
               <label for="info1">Solicitud de información adicional</label>
               <input type="radio" id="info1" name="info" checked>
               <label for="info2">Reserva de Ruta</label>
